@@ -9,7 +9,7 @@ extern "C" {
 #include <time.h>
 
 
-#define WIDTH   150
+#define WIDTH   100
 #define HEIGHT  50
 #define SLEEP   100000
 
