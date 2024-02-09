@@ -4,7 +4,6 @@
 
 
 ## Build
-
 First make sure that a C compiler like `gcc` or `clang`, `cmake` and `make` are installed.
 
 Clone the repository:
@@ -16,7 +15,7 @@ cd gol
 Then Build GoL:
 ```bash
 mkdir build
-cmake -B build/ -S .
+cmake -DOPTIMIZE=1 -B build/ -S .
 cmake --build build/
 ```
 
@@ -28,7 +27,6 @@ Once you built GoL, execute it from `build/` directory.
 
 
 ## Nix
-
 > [!NOTE]
 > Make sure that nix experimental features (`nix-command` and `flakes`) are enabled.
 

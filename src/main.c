@@ -9,8 +9,8 @@ extern "C" {
 #include <time.h>
 
 
-#define WIDTH   80
-#define HEIGHT  40
+#define WIDTH   150
+#define HEIGHT  50
 #define SLEEP   100000
 
 #define DEAD_CELL_CHAR ' '
