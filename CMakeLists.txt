@@ -7,10 +7,14 @@ project(
 
 
 set(CMAKE_C_STANDARD 99)
-add_compile_options(-Wall -Wextra -Wno-unused-result)
+add_compile_options(
+    -Wall
+    -Wextra
+    -Wno-unused-result
+)
 
 if (OPTIMIZE)
-    add_compile_options(-O2)
+    add_compile_options(-O2 -DNDEBUG)
 else()
     add_compile_options(-Og -ggdb)
 endif()
