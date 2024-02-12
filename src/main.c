@@ -10,13 +10,13 @@ extern "C" {
 
 
 #define WIDTH   100
-#define HEIGHT  50
+#define HEIGHT  35
 #define SLEEP   100000
 
 #define DEAD_CELL_CHAR ' '
 #define LIVE_CELL_CHAR '#'
 
-#define xfree(p) { free((p)); (p) = NULL; }
+#define xfree(p) do { free((p)); (p) = NULL; } while (0)
 
 static volatile sig_atomic_t running = 1;
 
@@ -105,7 +105,7 @@ void deinitTable(struct Table *t) {
 
 long rangeRandNum(long low, long top) {
     void *p = malloc(1);
-    long num = (((long)p + (long)rand()) % top) + low;
+    long num = (((long)p + (long)rand()) % (top - low)) + low;
     xfree(p);
     return num;
 }
