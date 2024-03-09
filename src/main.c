@@ -1,3 +1,9 @@
+/* Conway's Game of Life
+ *
+ * Author: Hossein Khosravi - https://github.com/thehxdev
+ * Description: This is my first try to implement Game of Life in C.
+ */
+
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
@@ -11,7 +17,7 @@ extern "C" {
 
 #define WIDTH   100
 #define HEIGHT  35
-#define SLEEP   100000
+#define SLEEP   100000 /* in micro-second */
 
 #define DEAD_CELL_CHAR ' '
 #define LIVE_CELL_CHAR '#'
