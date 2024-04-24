@@ -1,15 +1,16 @@
 { pkgs ? import <nixpkgs> { } }:
 pkgs.mkShell {
     packages = with pkgs; [
-        ## compiler and cmake
-        clang_17
-        llvmPackages_17.bintools
+        ## compiler and build system
+        llvmPackages.clang
+        llvmPackages.bintools
         cmake
-        gnumake
         ninja
+        gnumake
 
         ## debugging stuff
         gdb
+        gf
         valgrind
     ];
 
@@ -17,5 +18,4 @@ pkgs.mkShell {
     export CC=clang
     export CXX=clang++
     '';
-
 }
